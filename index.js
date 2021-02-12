@@ -31,6 +31,10 @@ const { fetchISSFlyOverTimes } = require('./iss');
 // })
 
 // index.js
+
+const { nextISSTimesForMyLocation } = require('./iss');
+
+
 const printPassTimes = function(passTimes) {
   for (const pass of passTimes) {
     const datetime = new Date(0);
@@ -39,8 +43,6 @@ const printPassTimes = function(passTimes) {
     console.log(`Next pass at ${datetime} for ${duration} seconds!`);
   }
 };
-const { nextISSTimesForMyLocation } = require('./iss');
-
 
 nextISSTimesForMyLocation((error, flyoverTimes) => {
   if (error) {
