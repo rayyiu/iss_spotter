@@ -12,13 +12,22 @@ const { fetchMyIP } = require('./iss');
 
 const { fetchCoordsByIP } = require('./iss');
 
-fetchCoordsByIP('108.172.154.235', (error, location) => {
-    if (error) {
-        console.log("No worky", error);
-        return;
-    }
-    console.log("worky!", location)
-    return;
-} )
+// fetchCoordsByIP('108.172.154.235', (error, location) => {
+//     if (error) {
+//         console.log("No worky", error);
+//         return;
+//     }
+//     console.log("worky!", location)
+//     return;
+// } )
+
+const { fetchISSFlyOverTimes } = require('./iss');
+// fetchISSFlyOverTimes ({ latitude: '49.27670', longitude: '-123.13000' }, (error, flyoverTimes) => {
+//     if (error) {
+//         console.log("Does not work");
+//         return;
+//     }
+//     console.log("works!", flyoverTimes)
+// })
 
 
