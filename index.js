@@ -32,7 +32,7 @@ const { fetchISSFlyOverTimes } = require('./iss');
 
 // index.js
 
-const { nextISSTimesForMyLocation } = require('./iss');
+const { nextISSTimesforMyLocation } = require('./iss');
 
 
 const printPassTimes = function(passTimes) {
@@ -44,7 +44,7 @@ const printPassTimes = function(passTimes) {
   }
 };
 
-nextISSTimesForMyLocation((error, flyoverTimes) => {
+nextISSTimesforMyLocation((error, flyoverTimes) => {
   if (error) {
     return console.log("It didn't work!", error);
   }
